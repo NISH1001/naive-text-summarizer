@@ -47,7 +47,10 @@ represent the whole text.
 Run the summarizer module:  
 
 ```bash
-python summarizer.py
+python summarizer.py 5
 ```
 
-This expects you to have a file named **test** inside **data/** folder i.e. **data/test** file is read and summarized accordingly.
+This expects you to have a file named **test** inside **data/** folder i.e. **data/test** file is read and summarized accordingly.  
+
+The second argument **5** represents the top 5 relevant sentences to be extracted from the summarizer. If no argument is supplied, 
+one-third of total sentences are returned along with corresponding ranks ordered in descending order.

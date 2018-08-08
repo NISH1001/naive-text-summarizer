@@ -12,11 +12,12 @@ def process_text(text):
     text = re.sub(r"\'ve", " have ", text)
     text = re.sub(r"n't", " not ", text)
 
-    text = re.sub(r"dont", " do not", text)
-    text = re.sub(r"didnt", " did not", text)
-    text = re.sub(r"wont", " will not", text)
-    text = re.sub(r"cant", " can not", text)
-    text = re.sub(r"shouldnt", " should not", text)
+    text = re.sub(r"dont", " do not ", text)
+    text = re.sub(r"didnt", " did not ", text)
+    text = re.sub(r"wont", " will not ", text)
+    text = re.sub(r"cant", " can not ", text)
+    text = re.sub(r"shouldnt", " should not ", text)
+    text = re.sub(r"thats", " that is ", text)
 
     text = re.sub(r"i'm", "i am ", text)
     text = re.sub(r"\'re", " are ", text)
