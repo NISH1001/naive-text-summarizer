@@ -30,7 +30,7 @@ def build_sim_matrix(sentences_tokenized):
 def textrank(sentences_tokenized, topn=5):
     matrix = build_sim_matrix(sentences_tokenized)
     ranks = pagerank(matrix)
-    return ranks
+    return matrix, ranks
 
 def main():
 

@@ -24,10 +24,10 @@ def build_transition_matrix(pagemap, indices):
                 transition[i][j] = 1/len(pagemap[source_page])
     return transition
 
-def pagerank(matrix, eps=0.0001, d=0.05):
+def pagerank(matrix, eps=0.0001, d=0.85):
     n = len(matrix)
     probs = np.ones(n)/n
-    while True:
+    for i in range(4):
         new_p = np.ones(n) * (1-d)/n + d*matrix.T.dot(probs)
         delta = abs(new_p-probs).sum()
         if delta <= eps:
