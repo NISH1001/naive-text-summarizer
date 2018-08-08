@@ -15,7 +15,7 @@ def calculate_similarity(tokens1, tokens2):
     for word in vocab:
         v1.append(int(word in tokens1))
         v2.append(int(word in tokens2))
-    return sum([x*y for x, y in zip(v1, v2)]) / (magnitude(v1) * magnitude(v2))
+    return np.dot(v1, v2)/(magnitude(v1) * magnitude(v2))
 
 def build_sim_matrix(sentences_tokenized):
     n = len(sentences_tokenized)
